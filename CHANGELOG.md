@@ -2,6 +2,25 @@
 
 ## unreleased
 
+## 0.0.1 - 2026-10-15
+
+### Changed
+
+* 依存 npm モジュールを更新 (React ^19.3.1、Rollup ^4.64.7)
+* `@s2j/docs-linter` を ^1.0.29に更新
+* textlint の許可パターンに `#status-*` アンカー ID を追加
+
+## 0.0.1 - 2026-10-12
+
+### Added
+
+* 配布 zip 生成スクリプト (`tools/dist/make-dist-zip.mjs`) と GitHub Actions (`dist-zip.yml`)
+* PHPUnit 用 GitHub Actions (`phpunit.yml`)
+
+### Changed
+
+* `.gitignore` のビルド出力を `/dist/`、`/release/`、`.dist-tmp/` に限定 (`tools/dist/` を無視しない)
+
 ## 0.0.1 - 2026-10-11
 
 ### Changed

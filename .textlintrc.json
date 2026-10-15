@@ -18,7 +18,8 @@
                 "/s2j-query-pinned-service/",
                 "/s2j-inquiry-destination-service/",
                 "/content-dates-service/",
-                "/[.。]\\s*「/u"
+                "/[.。]\\s*「/u",
+                "/#status-[a-z0-9-]+/"
             ]
         }
     },
