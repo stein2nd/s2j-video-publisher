@@ -18,19 +18,33 @@
     "files": [],
     "main": "",
     "scripts": {
-        "lint:docs": "s2j-docs-linter ./README.md ./CHANGELOG.md ./docs/**/*.md ./docs_mod/**/*.md"
+        "lint:docs": "s2j-docs-linter ./README.md ./CHANGELOG.md ./docs/**/*.md ./docs_mod/**/*.md",
+        "lint:php": "composer lint:php",
+        "phpstan": "composer phpstan",
+        "phpcs": "composer phpcs",
+        "phpcs:wpcs": "composer phpcs:wpcs",
+        "makepot": "wp i18n make-pot . languages/s2j-video-publisher.pot --domain=s2j-video-publisher",
+        "makemo": "wp i18n make-mo languages",
+        "makejson": "wp i18n make-json languages --no-purge",
+        "makei18n": "npm run makemo && npm run makejson",
+        "postbuild:production:gutenberg": "npm run makejson",
+        "pretest:unit:php:local": "composer install --no-interaction --prefer-dist",
+        "test:unit:php:local": "composer test:unit",
+        "prephpunit:wp-env": "composer install --no-interaction --prefer-dist",
+        "phpunit:wp-env": "composer test:unit",
+        "pretest:lint:php": "composer install --no-interaction --prefer-dist"
     },
     "dependencies": {
         "react": "^19.3.1",
         "react-dom": "^19.3.1"
     },
     "overrides": {
-        "rollup": "^4.64.7"
+        "rollup": "^4.65.0"
     },
     "devDependencies": {
-        "@s2j/docs-linter": "^1.0.29",
-        "rollup": "^4.64.7",
-        "vite": "^8.3.4"
+        "@s2j/docs-linter": "^1.0.30",
+        "rollup": "^4.65.0",
+        "vite": "^8.3.5"
     },
     "allowScripts": {
         "@s2j/docs-linter": true

@@ -2,6 +2,24 @@
 
 ## unreleased
 
+## 0.0.1 - 2026-10-24
+
+### Added
+
+* WordPress 未起動のユニット PHPUnit (`phpunit.unit.xml.dist`、`tests/phpunit/Unit/PluginSmokeTest.php`)
+* `npm run phpunit:wp-env` (GitHub Actions「PHPUnit」向け)
+
+### Changed
+
+* 対応 PHP の下限を **8.3** に引き上げ (WordPress [必須要件](https://ja.wordpress.org/about/requirements/)の推奨に合わせ、`composer.json` の `>=8.3` / platform v8.3.28、`README.md` と `docs_mod/specs.md` を更新)
+* GitHub Actions の PHP を v8.3に統一 (`phpunit.yml`、`dist-zip.yml` に WP-CLI を追加)
+* `docs-lint.yml` の paths に `composer.json` を追加
+* `phpcs.xml.dist` の `php_version` を80300に更新
+
+### Fixed
+
+* GitHub Actions「PHPUnit」が `phpunit:wp-env` 未定義で失敗する問題
+
 ## 0.0.1 - 2026-10-15
 
 ### Changed
