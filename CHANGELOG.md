@@ -2,6 +2,17 @@
 
 ## unreleased
 
+## 0.0.1 - 2026-10-26
+
+### Added
+
+* 管理 JS 追加時の Vite 入口 (`vite.config.ts` のプレースホルダ)
+
+### Changed
+
+* `makejson` のデフォルトを purge ありに変更。孤児 JED を残す場合は `makejson:keep` (`--no-purge`) を使う
+* `.gitignore` に JED (`languages/*-{32hex}.json`) はコミット対象である旨の注記を追加
+
 ## 0.0.1 - 2026-10-24
 
 ### Added
